@@ -3,6 +3,7 @@
 
 //! IR objects that can be parsed from their text representation.
 
+use crate::parse_error::{self as easy, Errors, ParseError};
 use alloc::{boxed::Box, string::String, vec, vec::Vec};
 use core::any::Any;
 use thiserror::Error;
@@ -15,7 +16,6 @@ use crate::{
     },
     combine::{
         Parser, Positioned, StreamOnce, choice,
-        easy::{self, Errors, ParseError},
         error::{StdParseResult2, Tracked},
         parser::char::string,
         stream::{

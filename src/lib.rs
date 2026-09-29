@@ -51,6 +51,7 @@ pub mod op;
 pub mod operation;
 pub mod opts;
 pub mod parsable;
+pub mod parse_error;
 pub mod pass;
 pub mod printable;
 pub mod region;
